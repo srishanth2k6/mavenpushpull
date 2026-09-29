@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>SELABINTERNAL1</groupId>
@@ -18,10 +21,11 @@
   </properties>
 
   <dependencies>
+
     <!-- Dependency Block A: Core Web Application API -->
     <dependency>
       <groupId>javax.servlet</groupId>
-      <artificatId>javax.servlet-api</artificatId>
+      <artifactId>javax.servlet-api</artifactId>
       <version>4.0.1</version>
       <scope>provided</scope>
     </dependency>
@@ -37,6 +41,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
 
@@ -46,27 +51,32 @@
       <artifactId>sports-analytics</artifactId>
       <version>1.0.0</version>
     </dependency>
+
   </dependencies>
 
   <build>
-    <!-- Notice the name provided here -->
+
     <finalName>StudentCourseManagementSystem</finalName>
-    
+
     <pluginManagement>
       <plugins>
-        <!-- Standard Maven Plugins... -->
+
+        <!-- Standard Maven Plugins -->
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.13.0</version>
         </plugin>
+
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.4.0</version>
         </plugin>
+
       </plugins>
     </pluginManagement>
 
     <plugins>
+
       <!-- Plugin Block E: Embedded Tomcat Server -->
       <plugin>
         <artifactId>tomcat7-maven-plugin</artifactId>
@@ -76,6 +86,9 @@
           <path>/SportsTournament</path>
         </configuration>
       </plugin>
+
     </plugins>
+
   </build>
+
 </project>
